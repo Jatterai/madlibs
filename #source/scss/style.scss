@@ -1,0 +1,29 @@
+@import "null";
+
+//----virables---/
+$White: hsl(0, 0%, 100%);
+$Light-gray: hsl(212, 45%, 89%);
+$Grayish-blue: hsl(220, 15%, 55%);
+$Dark-blue: hsl(218, 44%, 22%);
+
+.wrapper {
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	flex: 1 1 auto;
+}
+
+._container {
+	max-width: 1440px;
+	padding: 0px 20px;
+	margin: 0 auto;
+	@media (max-width: 767px) {
+		padding: 0 15px;
+	}
+}
