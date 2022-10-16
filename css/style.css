@@ -1,25 +1,30 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
 *,
 *::before,
 *::after {
-	padding: 0;
-	margin: 0;
-	border: 0;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
 }
 
 ul,
 ol,
 li {
-	list-style: none;
+  list-style: none;
 }
 
 img {
-	vertical-align: top;
+  vertical-align: top;
 }
 
 h1,
@@ -28,40 +33,165 @@ h3,
 h4,
 h5,
 h6 {
-	font-weight: inherit;
-	font-size: inherit;
+  font-weight: inherit;
+  font-size: inherit;
 }
 
 html,
 body {
-	height: 100%;
-	letter-spacing: 1;
+  height: 100%;
+  letter-spacing: 1;
 }
 
 /*----------------------------------*/
 /*----------------------------------*/
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__logo {
+  margin: 5px 0;
+  position: relative;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  width: 4vw;
+}
+
+.header__logo img {
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+  position: absolute;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 767px) {
+  .header__logo img {
+    width: 10vw;
+  }
+}
+
+.header__nav {
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 0 1.5em;
+  border-right: 1px solid;
+}
+
+.header__link:hover {
+  background-color: #7f7f7f46;
+}
+
+.header__link[data-mode="day"] {
+  border-color: #a4a4a4;
+}
+
+.header__link[data-mode="night"] {
+  border-color: #404040;
+}
+
+.header[data-mode="day"] {
+  background-color: #d6d2d2;
+}
+
+.header[data-mode="night"] {
+  background-color: #1a1a1a;
+}
+
+[data-mode] {
+  -webkit-transition: background-color 200ms ease-in-out 0s, color 150ms linear 0s, border-color 200ms ease-in-out 0s;
+  transition: background-color 200ms ease-in-out 0s, color 150ms linear 0s, border-color 200ms ease-in-out 0s;
+}
+
+body {
+  font-family: "Roboto";
+}
+
+body[data-mode="day"] {
+  background-color: #fefefe;
+  color: #333;
+}
+
+body[data-mode="night"] {
+  background-color: #333;
+  color: #fefefe;
+}
+
 .wrapper {
-	position: relative;
-	width: 100%;
-	min-height: 100%;
-	overflow: hidden;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
-	flex-direction: column;
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 main {
-	-webkit-box-flex: 1;
-	-ms-flex: 1 1 auto;
-	flex: 1 1 auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
 ._container {
-	max-width: 1440px;
-	padding: 0px 20px;
-	margin: 0 auto;
+  max-width: 1440px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  ._container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.lalalal {
+  background-color: hotpink;
+  z-index: 50;
+  color: white;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  padding: 7px;
+  -webkit-box-shadow: -2px 2px #9c2981;
+          box-shadow: -2px 2px #9c2981;
+  border-radius: 10px;
+  width: 70px;
+  cursor: pointer;
 }
