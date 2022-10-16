@@ -23,3 +23,13 @@ function changeMode(e) {
 		currentMode = true;
 	}
 }
+
+
+//---------------------welcome--------------------------//
+
+/*const welcome = document.querySelector('.title');
+window.onload = function prom() {
+	setTimeout(() => {
+		welcome.classList.add('hidden');
+	}, 3000);
+}*/

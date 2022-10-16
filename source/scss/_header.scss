@@ -10,9 +10,9 @@
 		position: relative;
 		aspect-ratio: 1/1;
 		overflow: hidden;
-		width: 4vw;
+		width: 50px;
 		@media (max-width: 767px) {
-			width: 7vw;
+			width: 30px;
 		}
 		img {
 			transition: all 200ms ease;
@@ -25,6 +25,9 @@
 	&__nav {
 		align-self: stretch;
 		display: flex;
+		@media (max-width: 500px) {
+			display: none;
+		}
 	}
 
 	&__list {

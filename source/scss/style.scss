@@ -1,6 +1,6 @@
 @import "null";
-@import "header";
-@import "footer";
+@import url("https://fonts.googleapis.com/css2?family=Neucha&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
 //----virables---/
 $White: hsl(0, 0%, 100%);
@@ -34,6 +34,7 @@ body {
 
 main {
 	flex: 1 1 auto;
+	position: relative;
 }
 
 ._container {
@@ -60,3 +61,8 @@ main {
 	width: 70px;
 	cursor: pointer;
 }
+
+@import "header";
+@import "footer";
+@import "main-title";
+@import "survey";

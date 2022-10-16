@@ -1,0 +1,39 @@
+.title {
+	font-family: "Amatic SC";
+	font-weight: 700;
+	font-size: calc(30px + 20 * (100vw / 1280));
+	position: absolute;
+	top: 0;
+	opacity: 1;
+	width: 100%;
+	height: 100%;
+	z-index: 40;
+	transition: all 1s ease-out 0s;
+	&__container {
+		padding: 30px 0;
+		text-align: center;
+	}
+	&__title {
+		font-size: 150%;
+	}
+
+	&__subtitle {
+	}
+
+	&__subsubtitle {
+	}
+	&[data-mode="day"] {
+		background-color: #fefefe;
+		color: #333;
+	}
+	&[data-mode="night"] {
+		background-color: #333;
+		color: #fefefe;
+	}
+	&.hidden {
+		opacity: 0;
+	}
+	@media (max-width: 767px) {
+		font-size: calc(30px + (20 * 0.7) (100vw - 320px / 1280));
+	}
+}
