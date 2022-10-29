@@ -67,7 +67,7 @@ function showAnswers(srvContainer, ansContainer) {
 
 	places.forEach(i => {
 		i.textContent = (!i.textContent || i.textContent[0] === i.textContent[0].toLowerCase()) ?
-			answers[`${i.dataset.for}`] :
+			answers[`${i.dataset.for}`][0].toLowerCase() + answers[`${i.dataset.for}`].slice(1) :
 			answers[`${i.dataset.for}`][0].toUpperCase() + answers[`${i.dataset.for}`].slice(1);
 
 	});
