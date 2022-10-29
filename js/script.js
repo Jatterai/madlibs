@@ -28,13 +28,13 @@ function changeMode(e) {
 
 //---------------------welcome--------------------------//
 
-// const welcome = document.querySelector('.title');
-// console.log(welcome);
-// window.onload = function prom() {
-// 	setTimeout(() => {
-// 		welcome.classList.add('hidden');
-// 	}, 3000);
-// }
+const welcome = document.querySelector('.title');
+console.log(welcome);
+window.onload = function prom() {
+	setTimeout(() => {
+		welcome.classList.add('hidden');
+	}, 3000);
+}
 
 
 //--------------survey------------//
