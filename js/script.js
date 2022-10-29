@@ -62,12 +62,12 @@ function showAnswers(srvContainer, ansContainer) {
 	//Находит все инпуты и записывает их в объект answers. ключ - id, значение - value;
 	Array
 		.from(srvContainer.querySelectorAll('.survey__input'))
-		.forEach(i => answers[i.id] = i.value);
+		.forEach(i => answers[i.id] = i.value.toLowerCase());
 	const places = ansContainer.querySelectorAll('[data-for]');
 
 	places.forEach(i => {
 		i.textContent = (!i.textContent || i.textContent[0] === i.textContent[0].toLowerCase()) ?
-			answers[`${i.dataset.for}`][0].toLowerCase() + answers[`${i.dataset.for}`].slice(1) :
+			answers[`${i.dataset.for}`] :
 			answers[`${i.dataset.for}`][0].toUpperCase() + answers[`${i.dataset.for}`].slice(1);
 
 	});
