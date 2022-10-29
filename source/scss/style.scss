@@ -8,8 +8,8 @@ $Light-gray: hsl(212, 45%, 89%);
 $Grayish-blue: hsl(220, 15%, 55%);
 $Dark-blue: hsl(218, 44%, 22%);
 
-[data-mode] {
-	transition: background-color 200ms ease-in-out 0s, color 150ms linear 0s, border-color 200ms ease-in-out 0s;
+html {
+	scroll-behavior: smooth;
 }
 
 body {
@@ -17,10 +17,16 @@ body {
 	&[data-mode="day"] {
 		background-color: #fefefe;
 		color: #333;
+		*::selection {
+			background-color: #c2fcf4;
+		}
 	}
 	&[data-mode="night"] {
 		background-color: #333;
 		color: #fefefe;
+		*::selection {
+			background-color: #7a3642;
+		}
 	}
 }
 .wrapper {
@@ -62,7 +68,21 @@ main {
 	cursor: pointer;
 }
 
+section {
+	transition: all 500ms ease-in-out 0s, background-color 200ms ease-in-out 0s, color 100ms linear 0s,
+		border-color 200ms ease-in-out 0s;
+	&.hidden {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+[data-mode] {
+	transition: background-color 200ms ease-in-out 0s, color 100ms linear 0s, border-color 200ms ease-in-out 0s;
+}
+
 @import "header";
 @import "footer";
 @import "main-title";
 @import "survey";
+@import "res";
